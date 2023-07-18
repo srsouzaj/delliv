@@ -6,19 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "next": "13.4.10",
+    "next": "12.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "husky": "^8.0.3",
     "typescript": "5.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
