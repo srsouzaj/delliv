@@ -1,16 +1,56 @@
-html,
-body {
-  padding: 0;
+:root {
+  --white: #fff;
+
+  --gray-50: #F4F6F6;
+  --gray-100: #e1e1e6;
+  --gray-300: #c4c4cc;
+  --gray-400: #8d8d99;
+  --gray-500: #1F1F1F;
+  --gray-600: #323238;
+  --gray-700: #29292e;
+  --gray-800: #202024;
+  --gray-900: #121214;
+
+  --red-500: #f75a68;
+
+  --green-300: #00b37e;
+  --green-500: #00875f;
+
+  --purple-50: #faf2f9;
+  --purple-200: #bb83eb;
+  --purple-300: #ac58ee;
+  --purple-400: #9d67d2;
+  --purple-500: #7f16e1;
+
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--purple-300);
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+  color: var(--gray-500);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }

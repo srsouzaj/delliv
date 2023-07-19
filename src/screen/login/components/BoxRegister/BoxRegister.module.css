@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.register{
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-500);
+    gap: 8px;
+ }
+
+ .link{
+   font-size: 0.75rem;
+   font-weight: bold;
+   cursor: pointer;
+   color: var(--purple-500);
+} 
+
+ .copyright{
+    display: flex;
+    font-size: 0.65rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-500);  
+ }
+ 

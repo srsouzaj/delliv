@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+.buttons button {
+    border-radius: 16px;
+    border: none;
+    font-size: 0.8rem;
+    padding: 12px 24px;
+    background-color: var(--purple-100);
+    display: flex;
+    border: 1px solid var(--purple-500);
+    gap: 12px;
+    align-items: center;
+    color: var(--purple-500);
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    background-color: var(--purple-200);
+    color: var(--white);
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+ }
+
+ .description span{
+    width: 20%;
+    border: 1px solid var(--gray-300);    
+ }
+
+ .description p{
+    font-size: 0.75rem;
+ }
+
