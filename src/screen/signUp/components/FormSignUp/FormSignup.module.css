@@ -1,0 +1,95 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+ }
+ 
+ .container fieldset{
+     padding: 8px 0;
+     border: none;
+ }
+ 
+ .container label{
+     font-size: 0.75rem;
+ }
+ 
+ 
+ .link{
+     font-size: 0.75rem;
+     font-weight: bold;
+     display: block;
+     padding: 8px;
+     text-align: right;
+     cursor: pointer;
+     color: var(--purple-500);
+  } 
+ 
+  .input{
+     padding: 5px 10px;
+     width: 100%;
+     font-size: 0.75rem;
+     border:solid 1px #ccc;
+     border-radius: 10px;
+     color: var(--gray-500);   
+ }
+ 
+ .input::placeholder {
+     color: var(--gray-400);
+     font-size: 0.75rem;
+   }
+ 
+ 
+ .button {
+     border-radius: 16px;
+     width: 100%;
+     border: none;
+     padding: 12px;
+     font-size: 0.8rem;
+     background-color: var(--purple-300);
+     color: var(--white);
+ }
+ 
+ .button:hover{
+     background-color: var(--purple-200);
+ }
+ 
+ .buttonContainer{
+     width: 100%;
+     display: flex;
+     gap: 12px;
+ }
+ 
+ .back{
+     border: 1px solid var(--purple-200);
+     border-radius: 16px;
+     width: 100%;
+     padding: 12px;
+     font-size: 0.8rem;
+     background-color: var(--white);
+     color: var(--purple-200);
+ }
+ 
+ 
+ .back:hover{
+     background-color: var(--purple-200);
+     color: var(--white);
+ }
+ 
+ .policy{
+     padding: 24px 0;
+     font-size: 0.75rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+ 
+ .policy a{
+     font-weight: bold;
+     color: var(--purple-300);
+     cursor: pointer;
+ }
+ 
+ 
