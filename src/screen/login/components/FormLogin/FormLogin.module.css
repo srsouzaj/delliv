@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+ }
+ 
+ .container fieldset{
+     padding: 8px 0;
+     border: none;
+ }
+ 
+ .container label{
+     font-size: 0.75rem;
+ }
+ 
+ 
+ .link{
+    display: flex;
+    justify-content: flex-end;
+     font-size: 0.75rem;
+     font-weight: bold;     
+     padding: 8px;     
+     cursor: pointer;
+     color: var(--purple-500);
+  } 
+ 
+  .input{
+     padding: 5px 10px;
+     width: 100%;
+     font-size: 0.75rem;
+     border:solid 1px #ccc;
+     border-radius: 10px;
+     color: var(--gray-500);   
+ }
+ 
+ .input::placeholder {
+     color: var(--gray-400);
+     font-size: 0.75rem;
+   } 
+ 
+ .button {
+     border-radius: 16px;
+     border: none;
+     padding: 12px;
+     font-size: 0.8rem;
+     background-color: var(--purple-300);
+     color: var(--white);
+ }
+ 
+ .button:hover{
+     background-color: var(--purple-200);
+ }
+ 
+ 

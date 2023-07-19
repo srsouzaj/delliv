@@ -1,0 +1,19 @@
+.regular {
+    font-size: 1rem;
+}
+
+.small {
+    font-size: 0.75rem;
+}
+
+.headline {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.error {
+    font-size: 0.75rem;
+    color: var(--red-500);
+    font-weight: 300 bold;
+    
+}
