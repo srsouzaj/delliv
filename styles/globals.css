@@ -22,6 +22,12 @@
   --purple-400: #9d67d2;
   --purple-500: #7f16e1;
 
+        
+  --yellow-100: #FEF8CC;
+  --yellow-200: #FEEF9A;
+  --yellow-300: #FEE468;
+  --yellow-400: #FDD842;
+  --yellow-500: #FCC604
 }
 
 :focus {

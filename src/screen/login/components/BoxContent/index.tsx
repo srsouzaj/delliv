@@ -3,7 +3,6 @@ import styles from './BoxContent.module.css'
 import Logo from "../../../../../public/logo.jpeg"
 import { BoxSocialLogin } from '../BoxSocialLogin'
 import { BoxRegister } from '../BoxRegister'
-import Link from 'next/link'
 import { Typography } from '../../../../components/Typography'
 import { FormLogin } from '../FormLogin'
 
@@ -13,9 +12,7 @@ export const BoxContent = () => {
             <Image src={Logo} width={80} height={80} alt="Logo da Delliv" />
             <Typography as='headline'>Acesse com seu login</Typography>
             <FormLogin />
-
             <BoxSocialLogin />
-
             <BoxRegister />
         </div>
     )

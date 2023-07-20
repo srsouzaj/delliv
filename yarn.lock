@@ -2733,6 +2733,11 @@ path-type@^4.0.0:
   resolved "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+phosphor-icons@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.npmjs.org/phosphor-icons/-/phosphor-icons-1.4.2.tgz"
+  integrity sha512-vDyuRWLSEb87dxpoOGpP1GCjr/TFzA0Ljt0TtJcwXO7/iPdSZW0e/2m1jsANH1ML5ZyZXcjeWx6pzT0A0tgYDA==
+
 phosphor-react@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/phosphor-react/-/phosphor-react-1.4.1.tgz"

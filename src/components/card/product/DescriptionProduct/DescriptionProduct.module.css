@@ -1,0 +1,52 @@
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.name {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+}
+
+.description{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+}
+
+.details{
+    border-radius: 12px;
+    border: none;
+    padding: 12px;
+    height: 40px;
+    background-color: var(--purple-300);
+    color: var(--white);
+    font-size: 0.75rem;
+}
+
+.details:hover{    
+    background-color: var(--purple-200);
+}
+
+.cart{
+    padding: 8px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--purple-500);
+    background-color: var(--purple-100);
+}
+
+.cart:hover{    
+    background-color: var(--purple-200);
+}
+
+.buttonsContainer{
+    display: flex;
+    gap: 12px;
+}
