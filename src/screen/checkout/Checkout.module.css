@@ -1,0 +1,15 @@
+.container{
+    height: calc(100% - 80px);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boxesContainer{
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+

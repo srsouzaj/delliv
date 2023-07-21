@@ -39,12 +39,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--purple-50);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background:  var(--purple-500);
+}
+
 
 body {
   background: var(--white);
   color: var(--gray-500);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body,

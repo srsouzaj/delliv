@@ -1,0 +1,17 @@
+.buttonControllerContainer{
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+    align-items: center;
+    background-color: var(--gray-100);
+    border-radius: 12px;
+}
+
+.spanController{
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    cursor: pointer;
+}

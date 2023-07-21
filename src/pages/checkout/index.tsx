@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import { ProductScreen } from '../../screen/product'
+import { CheckoutScreen } from '../../screen/checkout'
 
 const ProductById: NextPage = () => {
     return (
         <>
-            <title>Delliv - Produtos</title>
-            <ProductScreen id={1} />
+            <title>Delliv - Checkout</title>
+            <CheckoutScreen />
         </>
     )
 }

@@ -20,19 +20,12 @@
   text-overflow: ellipsis;
 }
 
-.details{
-    border-radius: 12px;
-    border: none;
-    padding: 12px;
-    height: 40px;
-    background-color: var(--purple-300);
-    color: var(--white);
-    font-size: 0.75rem;
+.buttonsContainer{
+    display: flex;
+    gap: 12px;
+    justify-content: space-evenly;
 }
 
-.details:hover{    
-    background-color: var(--purple-200);
-}
 
 .cart{
     padding: 8px;
@@ -46,7 +39,3 @@
     background-color: var(--purple-200);
 }
 
-.buttonsContainer{
-    display: flex;
-    gap: 12px;
-}
