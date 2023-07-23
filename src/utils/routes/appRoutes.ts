@@ -1,9 +1,11 @@
+import { CategoryType } from "../../models/interfaces/api/product.interface";
+
 export const AppRoutes = {
     home: {
         url: () => `/home`,
     },
     product: {
-        byId: { url: (id: number) => `/product/${id}` },
+        byType: { url: (type: CategoryType) => `/product/${type}` },
     },
     checkout: {
         url: () => `/checkout`

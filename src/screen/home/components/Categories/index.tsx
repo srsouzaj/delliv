@@ -6,24 +6,25 @@ import Link from "next/link"
 export const Categories = () => {
     return (
         <div className={styles.container}>
-            <Link className={styles.link} href={AppRoutes.product.byId.url(1)}>
+            <Link className={styles.link} href={AppRoutes.product.byType.url("bag")}>
                 <a className={styles.link}>
                     <Bag size={32} color="#fcfcfc" />
-                    Cama
+                    Bolsas
                 </a>
             </Link>
-            <Link className={styles.link} href={AppRoutes.product.byId.url(2)}>
+            <Link className={styles.link} href={AppRoutes.product.byType.url("gym")}>
                 <a className={styles.link}>
                     <Barbell size={32} color="#fcfcfc" />
                     Treino
                 </a>
             </Link>
-            <Link className={styles.link} href={AppRoutes.product.byId.url(3)}>
+            <Link className={styles.link} href={AppRoutes.product.byType.url("closet")}>
                 <a className={styles.link}>
-                    <CoatHanger size={32} color="#fcfcfc" /> Vestuário
+                    <CoatHanger size={32} color="#fcfcfc" />
+                    Vestuário
                 </a>
             </Link>
-            <Link className={styles.link} href={AppRoutes.product.byId.url(4)}>
+            <Link className={styles.link} href={AppRoutes.product.byType.url("tshirt")}>
                 <a className={styles.link}>
                     <TShirt size={32} color="#fcfcfc" />
                     Camisetas

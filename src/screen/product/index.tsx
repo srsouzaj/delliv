@@ -1,17 +1,18 @@
 import { Typography } from "../../components/Typography"
-import { CardProduct } from "../../components/card/product"
 import styles from "./product.module.css"
 import { CardList } from "./CardList"
+import { IProduct } from "../../models/interfaces/api/product.interface"
 
 interface IProductScreen {
-    id: number
+    products: IProduct[]
+    type: string
 }
 
-export const ProductScreen = ({ id }: IProductScreen) => {
+export const ProductScreen = ({ products, type }: IProductScreen) => {
     return (
         <div className={styles.container}>
-            <Typography as="headline"> Produtos</Typography>
-            <CardList />
+            <Typography as="headline"> Produtos relacionados à(ao) {type}</Typography>
+            <CardList products={products} />
         </div>
     )
 }

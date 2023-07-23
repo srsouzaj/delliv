@@ -4,7 +4,7 @@ import { NotFoundScreen } from "../screen/notFound"
 const NotFound = () => {
     return (
         <>
-            <title>Página não encontrada</title>
+            <title>Delliv - Página não encontrada</title>
             <NotFoundScreen />
         </>
     )
