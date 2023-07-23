@@ -1,4 +1,4 @@
-import { Bed, TShirt, CoatHanger, Barbell } from "phosphor-react"
+import { Bed, TShirt, CoatHanger, Barbell, Bag } from "phosphor-react"
 import styles from "./Categories.module.css"
 import { AppRoutes } from "../../../../utils/routes/appRoutes"
 import Link from "next/link"
@@ -8,7 +8,7 @@ export const Categories = () => {
         <div className={styles.container}>
             <Link className={styles.link} href={AppRoutes.product.byId.url(1)}>
                 <a className={styles.link}>
-                    <Bed size={32} color="#fcfcfc" />
+                    <Bag size={32} color="#fcfcfc" />
                     Cama
                 </a>
             </Link>

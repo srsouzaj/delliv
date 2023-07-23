@@ -7,12 +7,13 @@ interface ICardProduct {
     name: string;
     description: string;
     price: string
+    imgSrc: string
 }
 
-export const CardProduct = ({ description, name, price }: ICardProduct) => {
+export const CardProduct = ({ description, imgSrc, name, price }: ICardProduct) => {
     return (
         <div className={styles.container}>
-            <Image src={Logo} width={160} height={120} alt="" />
+            <Image src={imgSrc || Logo} width={160} height={120} alt="" />
             <DescriptionProduct description={description} name={name} price={price} />
         </div>
     )

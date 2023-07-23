@@ -5,6 +5,7 @@ import { ShoppingCart } from "phosphor-react"
 import { Search } from "./Search"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { AppRoutes } from "../../utils/routes/appRoutes"
 
 export const NavBar = () => {
     const { pathname } = useRouter()
@@ -19,8 +20,12 @@ export const NavBar = () => {
             <Link href={'home'}>
                 <Image src={Logo} width={80} height={80} alt="Logo da Delliv" />
             </Link>
-            <Search />
-            <span className={styles.shopping}><ShoppingCart color="#FFF" /></span>
+            {/* <Search /> */}
+            <Link className={styles.shopping} href={AppRoutes.checkout.url()}>
+                <a className={styles.shopping}>
+                    <ShoppingCart color="#FFF" />
+                </a>
+            </Link>
         </div>
     )
 }

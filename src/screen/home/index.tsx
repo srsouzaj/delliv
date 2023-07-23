@@ -8,7 +8,7 @@ export const HomeScreen = () => {
         <div className={styles.container}>
             <BoxHome />
             <FilterSection />
-            {/* <CardList /> */}
+            <CardList />
         </div>
     )
 }
