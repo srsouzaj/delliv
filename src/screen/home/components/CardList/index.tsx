@@ -6,9 +6,10 @@ import styles from "./CardList.module.css"
 export const CardList = () => {
     const { products } = useProduct()
     return (
-        <>
+        <div>
             <Typography as="headline">Produtos</Typography>
-            <div className={styles.container}>
+            <div className={styles.content}>
+                {!products && <Typography>Não há itens para a exibição</Typography>}
                 {products.data?.length === 0 &&
                     <Typography>Não há itens para a exibição</Typography>}
                 {products.data?.map(product => {
@@ -23,6 +24,6 @@ export const CardList = () => {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }

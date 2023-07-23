@@ -47,3 +47,17 @@
 .completeOrder label{
     font-size: 0.75rem;
 }
+
+@media(max-width: 415px) {
+    .container {
+        width: 100%;
+    }
+
+    .street {
+        flex-wrap: wrap;
+    }
+
+    .container label {
+        font-size: 0.75rem;
+    }
+}

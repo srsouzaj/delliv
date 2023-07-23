@@ -22,3 +22,13 @@
 .link:hover{
     background-color: var(--purple-200);
 }
+
+@media(max-width: 415px){
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .link{
+        width: 144px;
+    }
+}

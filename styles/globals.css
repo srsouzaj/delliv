@@ -59,6 +59,8 @@
 
 
 body {
+  width: 100vw;
+  height: 100vh;
   background: var(--white);
   color: var(--gray-500);
   -webkit-font-smoothing: antialiased;

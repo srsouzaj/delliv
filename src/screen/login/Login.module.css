@@ -11,3 +11,10 @@
     justify-content: center;
     background-color: var(--purple-300)
 }
+
+@media(max-width: 415px){
+
+    .boxBackground{
+        display: none;
+    }
+}

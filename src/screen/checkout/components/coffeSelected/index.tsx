@@ -13,7 +13,6 @@ export const CoffeeSelected = () => {
             <ProductItem name="Roupa Malhada" price="9.9" />
             <hr className={styles.divider} />
             <ProductItem name="Roupa Malhada" price="9.9" />
-            <hr className={styles.divider} />
         </div>
     )
 }

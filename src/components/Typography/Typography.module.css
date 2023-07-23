@@ -17,3 +17,10 @@
     font-weight: 300 bold;
     
 }
+
+@media(max-width: 415px) {
+    .headline { font-size: 1rem;}
+    .regular { font-size: 0.75rem;}
+    .small { font-size: 0.5rem;}
+    .error { font-size: 0.5rem;}
+}

@@ -23,6 +23,15 @@
 
 }
 
-.description {
+.description {}
 
+
+@media(max-width: 415px){
+    .controller button {
+        font-size: 0.6rem;
+    }
+
+    .controller button > svg {
+        display: none
+    }
 }

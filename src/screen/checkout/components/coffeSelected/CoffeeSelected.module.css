@@ -11,3 +11,10 @@
     background-color: var(--gray-200);
     width: 100%;
 }
+
+@media(max-width: 415px) {
+    .coffeSelected {
+        width: 100%;
+        padding: 12px;
+    }
+}

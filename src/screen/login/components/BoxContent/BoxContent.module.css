@@ -2,3 +2,11 @@
     width: 50%;
     padding: 40px 80px;
 }
+
+ 
+@media(max-width: 415px){
+
+    .boxContent{
+        width: 100%;
+    }
+}

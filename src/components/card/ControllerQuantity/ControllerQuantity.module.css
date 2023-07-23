@@ -8,10 +8,15 @@
 }
 
 .spanController{
-    border-radius: 50px;
     background-color: transparent;
     border: none;
     outline: none;
     color: var(--white);
     cursor: pointer;
+}
+
+@media(max-width: 415px){
+    .buttonControllerContainer span{
+        font-size: 0.75rem;
+    }
 }

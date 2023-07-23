@@ -13,3 +13,15 @@
     gap: 24px;
 }
 
+@media(max-width: 415px){
+    .container {
+        padding: 40px;
+    }
+
+    .boxesContainer {
+        flex-direction: column;
+    }
+}
+
+
+
