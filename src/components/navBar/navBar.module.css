@@ -9,6 +9,10 @@
     box-shadow: 0px 30px 18px -33px rgba(0,0,0,0.1);
 }
 
+.link{
+    cursor: pointer;
+}
+
 .shopping {
     height: 40px;
     width: 40px;

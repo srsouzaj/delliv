@@ -7,11 +7,11 @@ export const serverSideProduct = async (): Promise<
     IPagination<IProduct>
 > => {
     try {
-        const { data: jobData } = await api.get<
+        const { data: productData } = await api.get<
             IPagination<IProduct>
         >(ApiRoutes.products.url())
 
-        return jobData
+        return productData
     } catch (e) {
         return {
             data: [],

@@ -1,5 +1,7 @@
 .container {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .content {
@@ -9,3 +11,23 @@
     overflow-x: auto;
     flex-wrap: wrap;
 }
+
+.search{
+    display: flex;
+    gap: 8px;
+    width: 40%;
+}
+
+.input{
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 0.75rem;
+    border:solid 1px #ccc;
+    border-radius: 10px;
+    color: var(--gray-500);   
+}
+
+.input::placeholder {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+  }

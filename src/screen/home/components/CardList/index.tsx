@@ -1,28 +1,53 @@
 import { Typography } from "../../../../components/Typography"
 import { CardProduct } from "../../../../components/card/product"
 import { useProduct } from "../../../../hooks/useProduct"
+import { IProduct } from "../../../../models/interfaces/api/product.interface"
+import { Search } from "../../Search"
 import styles from "./CardList.module.css"
+import { useEffect, useState } from "react"
 
 export const CardList = () => {
+    const [search, setSearch] = useState<Array<IProduct>>([])
     const { products } = useProduct()
+
+
+    useEffect(() => {
+        setSearch(products.data)
+    }, [products])
+
+    const handleChange = (e: string) => {
+        const a = products.data.filter(item => {
+            if (e === "") return item
+            return item.name.includes(e)
+        })
+        setSearch(a)
+    }
+
+
     return (
-        <div>
+        <div className={styles.container}>
             <Typography as="headline">Produtos</Typography>
+            <div className={styles.search}>
+                <input
+                    onChange={(e) => handleChange(e.target.value)}
+                    className={styles.input}
+                    placeholder="Digite sua pesquisa aqui"
+                />
+            </div>
+
             <div className={styles.content}>
                 {!products && <Typography>Não há itens para a exibição</Typography>}
                 {products.data?.length === 0 &&
                     <Typography>Não há itens para a exibição</Typography>}
-                {products.data?.map(product => {
-                    return (
-                        <CardProduct
-                            key={product.id}
-                            imgSrc={product.imgSrc}
-                            description={product.description}
-                            name={product.name}
-                            price={product.price}
-                        />
-                    )
-                })}
+                {search?.map(item => (
+                    <CardProduct
+                        key={item.id}
+                        description={item.description}
+                        imgSrc={item.imgSrc}
+                        name={item.name}
+                        price={item.price}
+                    />
+                ))}
             </div>
         </div>
     )
