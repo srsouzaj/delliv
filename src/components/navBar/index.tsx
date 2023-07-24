@@ -9,6 +9,7 @@ import { useAppSelector } from "../../store/config.reducer"
 import { totalCartItemSelector } from "../../store/cart/features/cartSlice"
 import Profile from "../../../public/profile.jpg"
 import { LogoutDropdownMenu } from "../Dropdown/Logout"
+import { CartDropdownMenu } from "../Dropdown/Carts"
 
 export const NavBar = () => {
     const totalItems = useAppSelector(totalCartItemSelector)
@@ -26,12 +27,7 @@ export const NavBar = () => {
             </Link>
 
             <div className={styles.profile}>
-                <Link className={styles.shopping} href={AppRoutes.checkout.url()}>
-                    <a className={styles.shopping}>
-                        <ShoppingCart color="#FFF" />
-                        {!!totalItems && `${totalItems} itens`}
-                    </a>
-                </Link>
+                <CartDropdownMenu />
                 <div className={styles.profilePhoto} >
                     <Image src={Profile} alt="profile photo" width={25} height={25} />
                 </div>

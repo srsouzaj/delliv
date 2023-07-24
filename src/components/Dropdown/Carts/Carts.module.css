@@ -1,0 +1,84 @@
+.DropdownMenuContent{
+    width: 18.75rem;
+    cursor: pointer;
+    background-color: var(--gray-50);
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 8; 
+
+}
+
+.link {
+    font-size: 0.75rem;
+    width: 18.75rem;
+    color: var(--purple-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.total {
+    position: absolute;
+    border-radius: 50px;
+    background-color: var(--purple-300);
+    padding: 1px 4px;
+    color: var(--white);
+    font-size: 0.5rem;
+    top: 20px;
+}
+
+.DropdownMenuItem {
+    all: unset;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 3.75rem;
+    border-radius: 12px;
+    padding: 0.5rem;
+    position: relative;
+    background-color: var(--gray-200);
+}
+
+    .DropdownMenuItem:hover{
+        cursor: pointer;
+        background-color: var(--gray-100);
+    } 
+
+.DropdownMenuSeparator {
+    height: 1px;
+    background-color: var(--gray-400);
+    margin: 5px;
+}
+    
+
+.DropdownMenuLabel{
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    color: var(--gray-200);
+}
+
+.IconButton{
+    all: unset;
+    fontFamily: inherit;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple-500);
+    box-shadow: 0 2px 10px var(--gray-100);
+}
+.IconButton:focus { boxShadow: "0 0 0 2px" black };
