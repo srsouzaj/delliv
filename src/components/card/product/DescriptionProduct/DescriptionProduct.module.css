@@ -20,16 +20,34 @@
   text-overflow: ellipsis;
 }
 
+.descriptionQuantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--purple-300);
+    width: 40px;
+    border-radius: 50%;
+    
+}
+
 .buttonsContainer{
     display: flex;
     gap: 12px;
     justify-content: space-evenly;
+    
 }
 
 
 .cart{
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
     padding: 8px;
     height: 40px;
+    font-size: 0.75rem;
     border-radius: 12px;
     border: 1px solid var(--purple-500);
     background-color: var(--purple-100);

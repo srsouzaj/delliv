@@ -14,5 +14,10 @@ export enum CategoryEnum {
     gym = 'Academia',
 }
 
+export interface CartItem {
+    product: IProduct;
+    quantity: number;
+}
+
 
 export type CategoryType = keyof typeof CategoryEnum

@@ -1,7 +1,6 @@
 import { Typography } from "../../../components/Typography"
 import { CardProduct } from "../../../components/card/product"
 import { IProduct } from "../../../models/interfaces/api/product.interface"
-import { Search } from "../../home/Search"
 import styles from "./CardList.module.css"
 
 interface ICardList {
@@ -19,10 +18,8 @@ export const CardList = ({ products }: ICardList) => {
                     return (
                         <CardProduct
                             key={product.id}
-                            description={product.description}
-                            name={product.name}
-                            imgSrc={product.imgSrc}
-                            price={product.price} />
+                            product={product}
+                        />
                     )
                 })
             }
