@@ -33,9 +33,7 @@ export const FormLogin = () => {
             toast.error("Houve um erro ao efetuar o login, tente novamente mais tarde")
             return Promise.reject(e)
         }
-
     }
-
 
     return (
         <form onSubmit={handleSubmit(OnSubmit)} className={styles.container}>

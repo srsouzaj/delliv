@@ -38,15 +38,11 @@ export const CardList = () => {
                 {!products && <Typography>Não há itens para a exibição</Typography>}
                 {products.data?.length === 0 &&
                     <Typography>Não há itens para a exibição</Typography>}
-                {search?.map(item => (
-                    <CardProduct
-                        key={item.id}
-                        description={item.description}
-                        imgSrc={item.imgSrc}
-                        name={item.name}
-                        price={item.price}
-                    />
-                ))}
+                {search?.map(item => {
+                    if (!item) return <></>
+                    return <CardProduct key={item.id} product={item} />
+
+                })}
             </div>
         </div>
     )

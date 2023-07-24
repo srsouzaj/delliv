@@ -18,6 +18,20 @@
     border: none;
 }
 
+.submit {
+    margin: 12px;
+    border-radius: 16px;
+    border: none;
+    font-size: 0.8rem;
+    padding: 12px 24px;
+    background-color: var(--purple-100);
+    display: flex;
+    border: 1px solid var(--purple-500);
+    gap: 12px;
+    align-items: center;
+    color: var(--purple-500);
+    cursor: pointer;
+}
 
 .input{
     padding: 5px 10px;
