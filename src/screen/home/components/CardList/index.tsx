@@ -16,11 +16,11 @@ export const CardList = () => {
     }, [products])
 
     const handleChange = (e: string) => {
-        const a = products.data.filter(item => {
+        const recentSearch = products.data.filter(item => {
             if (e === "") return item
             return item.name.includes(e)
         })
-        setSearch(a)
+        setSearch(recentSearch)
     }
 
 
