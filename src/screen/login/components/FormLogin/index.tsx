@@ -5,8 +5,15 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { LoginFormSchema } from "../../../../models/schemas/login.schema"
 import { FormLoginTypes } from "../../../../models/interfaces/forms/login.interface"
 import { Typography } from "../../../../components/Typography"
+import { useAuth } from "../../../../hooks/context/useAuth"
+import { useRouter } from "next/router"
+import { AppRoutes } from "../../../../utils/routes/appRoutes"
+import { toast } from "react-toastify"
+
 
 export const FormLogin = () => {
+    const { signIn } = useAuth()
+    const router = useRouter()
     const { register, handleSubmit, formState: { errors, isSubmitting } }
         = useForm<FormLoginTypes>({
             resolver: zodResolver(LoginFormSchema),
@@ -16,9 +23,19 @@ export const FormLogin = () => {
             }
         })
 
-    const OnSubmit = (data: FormLoginTypes) => {
-        console.log(data)
+    const OnSubmit = async ({ email, password }: FormLoginTypes) => {
+        try {
+            await signIn({ email, password })
+            toast.success("Login efetuado com sucesso")
+            router.push(AppRoutes.home.url())
+        }
+        catch (e) {
+            toast.error("Houve um erro ao efetuar o login, tente novamente mais tarde")
+            return Promise.reject(e)
+        }
+
     }
+
 
     return (
         <form onSubmit={handleSubmit(OnSubmit)} className={styles.container}>

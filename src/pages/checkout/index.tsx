@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import { ProductScreen } from '../../screen/product'
+import type { GetServerSideProps, NextPage } from 'next'
 import { CheckoutScreen } from '../../screen/checkout'
+import { parseCookies } from 'nookies'
 
 const ProductById: NextPage = () => {
     return (
@@ -9,6 +9,23 @@ const ProductById: NextPage = () => {
             <CheckoutScreen />
         </>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const { dellivToken } = parseCookies(context)
+
+    if (!dellivToken) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: {}
+    }
 }
 
 export default ProductById

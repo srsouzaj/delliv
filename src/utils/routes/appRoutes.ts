@@ -13,4 +13,7 @@ export const AppRoutes = {
     signup: {
         url: () => `/signup`
     },
+    login: {
+        url: () => `/`
+    }
 }
