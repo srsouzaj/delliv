@@ -5,11 +5,11 @@ import { useForm } from "react-hook-form"
 import { FormCheckoutTypes } from "../../../../models/interfaces/forms/checkout.interface"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { CheckoutFormSchema } from "../../../../models/schemas/checkout.schema"
-import { useAppDispatch } from "../../../../store/config.reducer"
+import { useAppSelector } from "../../../../store/config.reducer"
 import { totalCartItemSelector } from "../../../../store/cart/features/cartSlice"
 
 export const CompletedOrder = () => {
-    const totalItems = useAppDispatch(totalCartItemSelector)
+    const totalItems = useAppSelector(totalCartItemSelector)
     const { register, handleSubmit, formState: { errors } } = useForm<FormCheckoutTypes>({
         resolver: zodResolver(CheckoutFormSchema)
     })
@@ -104,7 +104,7 @@ export const CompletedOrder = () => {
                     {errors.uf && <Typography as="error">{errors.uf.message}</Typography>}
                 </fieldset>
             </div>
-            <button disabled={totalCartItemSelector} className={styles.submit}>Enviar meu pedido</button>
+            <button disabled={totalItems === 0 || totalItems === undefined} className={styles.submit}>Enviar meu pedido</button>
         </form>
     )
 }

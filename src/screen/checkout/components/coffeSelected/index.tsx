@@ -1,10 +1,14 @@
 import { Typography } from "../../../../components/Typography"
+import { TotalPriceSelector } from "../../../../store/cart/features/cartSlice"
 import { useAppSelector } from "../../../../store/config.reducer"
 import styles from "./CoffeeSelected.module.css"
 import { ProductItem } from "./ProductItem"
 
 export const CoffeeSelected = () => {
     const cartItems = useAppSelector((state) => state.cart.cartItems)
+    const totalPrice = useAppSelector(TotalPriceSelector)
+
+
 
 
     return (
@@ -19,6 +23,9 @@ export const CoffeeSelected = () => {
                     </>
                 )
             })}
+            {totalPrice !== 0 && <div className={styles.total}>
+                <Typography as="headline">Total: {totalPrice.toFixed(2)}</Typography>
+            </div>}
 
         </div>
     )
