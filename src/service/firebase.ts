@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDgw2--UFRZhF8nVghpgsJ6w34K4bttLzY",
-    authDomain: "delliv-a2ee9.firebaseapp.com",
-    projectId: "delliv-a2ee9",
-    storageBucket: "delliv-a2ee9.appspot.com",
-    messagingSenderId: "342940956273",
-    appId: "1:342940956273:web:653f83a77b8a73185b4dd0",
-    measurementId: "G-S8GGZV20YS"
+    apiKey: process.env.NEXT_PUBLIC_API_APIKEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECTID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_API_MESSAGINGSENDER_ID,
+    appId: process.env.NEXT_PUBLIC_API_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_API_MEASUREMENTID,
 };
 
 const app = initializeApp(firebaseConfig);
