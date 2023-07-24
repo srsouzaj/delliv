@@ -4,7 +4,8 @@
 
 ## **💻** Projeto
 
-Projeto para conclusão do desafio técnico proposto pela Delliv, que consiste em criar um sistema de compras online. Mais detalhes [aqui](https://github.com/delliv-tech/delliv-coding-challenge-fullstack-junior/commits?author=danielpatricio-delliv). Foi criada a paleta de cores personalizada com base na logo da delliv.
+Projeto para conclusão do desafio técnico proposto pela Delliv, que consiste em criar um sistema de compras online. Mais detalhes [aqui](https://github.com/delliv-tech/delliv-coding-challenge-fullstack-junior/commits?author=danielpatricio-delliv). Foi criada a paleta de cores personalizada com base na logo da delliv. A folha de estilização foi criada com CSS modules, que possui integração nativa com NextJS, utilizado neste projeto.
+Além disso, foi utilizado o design pattern "Atomic Design".
 O login poderá ser feito após o cadastro ou, após o login com Google.
 
 ## Tecnologias utilizadas
