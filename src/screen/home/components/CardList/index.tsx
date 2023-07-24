@@ -2,7 +2,6 @@ import { Typography } from "../../../../components/Typography"
 import { CardProduct } from "../../../../components/card/product"
 import { useProduct } from "../../../../hooks/useProduct"
 import { IProduct } from "../../../../models/interfaces/api/product.interface"
-import { Search } from "../../Search"
 import styles from "./CardList.module.css"
 import { useEffect, useState } from "react"
 
@@ -15,10 +14,10 @@ export const CardList = () => {
         setSearch(products.data)
     }, [products])
 
-    const handleChange = (e: string) => {
+    const handleChange = (value: string) => {
         const recentSearch = products.data.filter(item => {
-            if (e === "") return item
-            return item.name.includes(e)
+            if (value === "") return item
+            return item.name.includes(value)
         })
         setSearch(recentSearch)
     }
