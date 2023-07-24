@@ -31,3 +31,9 @@
     color: var(--gray-400);
     font-size: 0.75rem;
   }
+
+  @media(max-width: 415px){
+    .search{
+        width: 100%;
+    }
+  }
