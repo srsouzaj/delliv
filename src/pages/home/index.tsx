@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import { HomeScreen } from '../../screen/home'
+import { parseCookies } from 'nookies'
 
 const Home: NextPage = () => {
     return (
@@ -9,5 +10,23 @@ const Home: NextPage = () => {
         </>
     )
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const { dellivToken } = parseCookies(context)
+
+    if (!dellivToken) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: {}
+    }
+}
+
 
 export default Home

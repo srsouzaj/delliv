@@ -5,6 +5,7 @@ import { CategoryType, IProduct } from '../../models/interfaces/api/product.inte
 import { IPagination } from '../../models/interfaces/api/pagination.interface'
 import { useState } from 'react'
 import { ProductEnum, ProductEnumType } from '../../utils/from-to/categories'
+import { parseCookies } from 'nookies'
 
 interface IProductByType {
     product: IPagination<IProduct>
@@ -31,21 +32,17 @@ const ProductByType: NextPage<IProductByType> = ({ product, type }) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const type = context.params?.type
-
     const product = await serverSideProduct()
+    const { dellivToken } = parseCookies(context)
 
-
-
-    // const { SensoramaToken } = parseCookies(context)
-
-    // if (!SensoramaToken) {
-    //     return {
-    //         redirect: {
-    //             destination: '/',
-    //             permanent: false,
-    //         },
-    //     }
-    // }
+    if (!dellivToken) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
 
     return {
         props: {
