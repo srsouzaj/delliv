@@ -33,7 +33,7 @@
   }
 
   @media(max-width: 415px){
-    .search{
-        width: 100%;
-    }
+    .search{ width: 100%; }
+    /* .container { flex-direction: row} */
+    .content {  overflow-y: auto; flex-wrap: nowrap; }
   }

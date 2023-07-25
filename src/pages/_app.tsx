@@ -5,12 +5,14 @@ import { AuthProvider } from '../store/auth.context'
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
 import ProvidersRedux from '../hooks/context/redux.providers'
+import CookieMessage from '../components/Cookies'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <ProvidersRedux>
         <NavBar />
+        <CookieMessage />
         <Component {...pageProps} />
         <ToastContainer
           position="top-right"

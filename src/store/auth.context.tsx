@@ -1,10 +1,10 @@
-import { UserCredential } from "firebase/auth"
 import { FormLoginTypes } from "../models/interfaces/forms/login.interface"
 import { ReactNode, createContext, useCallback } from "react"
 import nookies from "nookies"
 import {
     useSignInWithEmailAndPassword,
-    useCreateUserWithEmailAndPassword
+    useCreateUserWithEmailAndPassword,
+    useSignOut as signOutFirebase
 } from "react-firebase-hooks/auth"
 import { auth } from "../service/firebase"
 import { FormSignUpTypes } from "../models/interfaces/forms/signup.interface"
@@ -12,6 +12,7 @@ import { FormSignUpTypes } from "../models/interfaces/forms/signup.interface"
 export interface AuthContextData {
     signIn(credentials: FormLoginTypes): Promise<void>
     signUp(credentials: FormSignUpTypes): Promise<void>
+    signOut(): void
 }
 
 interface AuthProviderProps {
@@ -21,8 +22,9 @@ interface AuthProviderProps {
 export const AuthContext = createContext<AuthContextData>({} as AuthContextData)
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth)
+    const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth)
     const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth)
+
 
     const signIn = useCallback(async ({ email, password }: FormLoginTypes) => {
         try {
@@ -53,11 +55,20 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const signOut = useCallback(() => {
+        signOutFirebase(auth)
+
+        nookies.destroy(null, 'dellivToken', { path: '/' });
+        nookies.destroy(null, 'dellivCookiesPolicy', { path: '/' });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return (
         <AuthContext.Provider
             value={{
                 signIn,
-                signUp
+                signUp,
+                signOut
             }}
         >
             {children}
